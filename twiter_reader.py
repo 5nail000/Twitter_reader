@@ -171,17 +171,21 @@ def get_tweets(soup):
 def main():
     cookie_filename = '_cookies'
     twitter_url = 'https://twitter.com/'
+
+    # read chanels file
     chanels_file = 'chanels.txt'
     with open(chanels_file, "r", encoding="utf-8") as f:
         chanel_list = f.readlines()
     chanel_list = [c.rstrip() for c in chanel_list]
 
+    # get cookies
     if not os.path.isfile(cookie_filename):
         print('we have no cookies')
         print('gotta roll up your sleeves')
         cookie_getter(cookie_filename)
     driver = webdriver_start(cookie_filename)
 
+    # mineing
     while True:  # infinite loop
         for chanel in chanel_list:
             url = os.path.join(twitter_url, chanel)
