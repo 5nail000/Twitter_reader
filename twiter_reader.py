@@ -172,11 +172,11 @@ def main():
     cookie_filename = '_cookies'
     twitter_url = 'https://twitter.com/'
 
-    # read chanels file
-    chanels_file = 'chanels.txt'
-    with open(chanels_file, "r", encoding="utf-8") as f:
-        chanel_list = f.readlines()
-    chanel_list = [c.rstrip() for c in chanel_list]
+    # read channels file
+    channels_file = 'channels.txt'
+    with open(channels_file, "r", encoding="utf-8") as f:
+        channel_list = f.readlines()
+    channel_list = [c.rstrip() for c in channel_list]
 
     # get cookies
     if not os.path.isfile(cookie_filename):
@@ -187,8 +187,8 @@ def main():
 
     # mineing
     while True:  # infinite loop
-        for chanel in chanel_list:
-            url = os.path.join(twitter_url, chanel)
+        for channel in channel_list:
+            url = os.path.join(twitter_url, channel)
             soup_page = get_page(driver, url)
             tweet_texts = get_tweets(soup_page)
             pp.pprint(tweet_texts)
