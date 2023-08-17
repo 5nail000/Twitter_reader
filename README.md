@@ -6,7 +6,7 @@
 Для запуска скрипта у вас уже должен быть установлен Python 3.
 - Скачайте код
 - Установите зависимости командой `pip install -r requirements.txt`
-- Запустите сервер командой `python twiter_reader.py`
+- Запустите скрипт командой `python twiter_reader.py`
 
 ## Логин в Твиттер и получение печенек(cookies)
 Можно указать данные для автоматического логина при первом запуске и сохранения печенек. Файл `personalization_data.json`, для удобства заготовлен `personalization_data_template.json` - достаточно ввести данные в него и переименовать в **personalization_data.json**.
