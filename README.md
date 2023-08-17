@@ -1,3 +1,5 @@
+[![Python](https://img.shields.io/badge/-Python-blue?style=for-the-badge&logo=Python&logoColor=white)](https://www.python.org/)
+
 # Парсер твиттерa на Python с Selenium
 Эта программа парсит твиты с твиттер-каналов с помощью Selenium и BeautifulSoup.
 
