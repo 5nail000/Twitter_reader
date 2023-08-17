@@ -171,7 +171,10 @@ def get_tweets(soup):
 def main():
     cookie_filename = '_cookies'
     twitter_url = 'https://twitter.com/'
-    chanel_list = ['RockstarGames', 'Activision', 'PlayStation']
+    chanels_file = 'chanels.txt'
+    with open(chanels_file, "r", encoding="utf-8") as f:
+        chanel_list = f.readlines()
+    chanel_list = [c.rstrip() for c in chanel_list]
 
     if not os.path.isfile(cookie_filename):
         print('we have no cookies')
